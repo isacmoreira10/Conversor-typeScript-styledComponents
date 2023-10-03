@@ -8,8 +8,6 @@ import Ellipse from '../../../assets/images/Ellipse 2.png'
 import React, { useContext, useState } from 'react'
 import { ConversionContext } from '../../../context/Context'
 
-
-// <h1>Jesus é o Salvador</h1>
 export interface DollarProps {
     dollar: number | undefined
     setDollar: React.Dispatch<React.SetStateAction<number | undefined>>
@@ -19,7 +17,6 @@ export interface RateProps {
     rate: number
     setRate: React.Dispatch<React.SetStateAction<number | undefined>>
 }
-
 
 
 export function Main() {
@@ -40,11 +37,8 @@ export function Main() {
 
                 setquotationReal(resultQuotationReal)
                 setquotation(resultQuotation)
-
             }
         }
-
-
     }
 
     let resultConversion = 0
@@ -91,8 +85,6 @@ export function Main() {
                             id="dollar"
                             onChange={takeValueDollarInput}
                             value={Number(dollar)}
-                        // value='Initial Value'
-
                         ></input>
                     </FormDolarContainer>
                     <FormRateContainer>
@@ -141,7 +133,7 @@ export function Main() {
                     </Ellipse4>
                 </EllipseContainer>
 
-                {/* <DollarImage src={Mask}></DollarImage> */}
+                <DollarImage src={Mask}></DollarImage> 
             </Img>
         </div>
     )
