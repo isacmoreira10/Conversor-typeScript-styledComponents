@@ -4,6 +4,8 @@ import styled from "styled-components";
 export const MainDiv = styled.main`
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
     margin-left: 64px;
     margin-top: 100px;
 `
