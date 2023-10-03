@@ -3,7 +3,7 @@ import { Card, Converter, Ellipse2, Ellipse3, Ellipse4, EllipseContainer, FormDi
 import Tranfer from '../../../assets/images/Transfer.png'
 import UnMarked from '../../../assets/images/Unmarked.png'
 import { NavLink } from 'react-router-dom'
-// import Mask from '../../../assets/images/Mask.png'
+import Mask from '../../../assets/images/Mask.png'
 import Ellipse from '../../../assets/images/Ellipse 2.png'
 import React, { useContext, useState } from 'react'
 import { ConversionContext } from '../../../context/Context'
