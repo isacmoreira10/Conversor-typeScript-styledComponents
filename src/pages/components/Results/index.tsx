@@ -1,17 +1,14 @@
 import { DescriptionPurchase, Ellipse2, Ellipse3, Ellipse4, EllipseContainer, Img, ResultsContainer, ResultsConvertion, Text } from "./styles";
 import { ArrowLeft } from 'phosphor-react'
 import Ellipse from '../../../assets/images/Ellipse 2.png'
-// import Mask from '../../../assets/images/Mask.png'
+    import Mask from '../../../assets/images/Mask.png'
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { ConversionContext } from "../../../context/Context";
 
 export function Results() {
     const { conversion, rateShareDate, quotation, quotationReal } = useContext(ConversionContext)
-    // console.log(conversion)
-    // console.log(rateShareDate)
-    // console.log(quotation)
-    // console.log(quotationReal)
+
     return (
         <div>
             <ResultsContainer>
@@ -42,7 +39,7 @@ export function Results() {
                     </Ellipse4>
                 </EllipseContainer>
 
-                {/* <DollarImage src={Mask}></DollarImage> */}
+                <DollarImage src={Mask}></DollarImage> 
             </Img>
         </div>
     )
