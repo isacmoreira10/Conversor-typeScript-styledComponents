@@ -26,6 +26,8 @@ export function Main() {
     const { setConversion, setRateShareDate, setquotation, setquotationReal } = useContext(ConversionContext)
     const [dollar, setDollar] = useState<DollarProps | number>(0)
     const [rate, setRate] = useState<RateProps | number>(0)
+    const [imageUnMarkedDollar, setImageDollar] = useState(UnMarked)
+    const [imageUnMarkedCarton, setImageUnMarkedCarton] = useState(UnMarked)
 
     let resultQuotationReal = 0
     let resultQuotation = 0
@@ -55,6 +57,20 @@ export function Main() {
         if (dollar != undefined) {
             resultConversion = Number(dollar) * Number(event?.target.value)
             setConversion(resultConversion)
+        }
+    }
+
+       function handleChangeImageMarkedDollar() {
+        if (imageUnMarkedCarton === Marked || imageUnMarkedDollar === UnMarked) {
+            setImageUnMarkedCarton(UnMarked)
+            setImageDollar(Marked)
+        }
+    }
+
+    function handleChangeImageMarked() {
+        if (imageUnMarkedDollar === Marked || imageUnMarkedCarton === UnMarked) {
+            setImageUnMarkedCarton(Marked)
+            setImageDollar(UnMarked)
         }
     }
 
@@ -92,9 +108,15 @@ export function Main() {
                 </FormDiv>
                 <TypePurchase>tipo de compra</TypePurchase>
                 <MethodPurchase>
-                    <img src={UnMarked}></img>
+                    <img 
+                        src={imageUnMarkedDollar}
+                        onClick={handleChangeImageMarkedDollar}>
+                        ></img>
                     <Money>dinheiro</Money>
-                    <img src={UnMarked}></img>
+                    <img 
+                        src={imageUnMarkedCarton}
+                        onClick={handleChangeImageMarked}>
+                        ></img>
                     <Card>cartão</Card>
                 </MethodPurchase>
                 <nav>
